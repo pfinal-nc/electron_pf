@@ -1,0 +1,43 @@
+{
+  "name": "pf_time",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "npx electron-builder",
+    "dev": "./node_modules/.bin/electron-reload .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^28.2.0",
+    "electron-builder": "^24.9.1",
+    "electron-reload": "^2.0.0-alpha.1",
+    "gulp": "^4.0.2"
+  },
+  "dependencies": {
+    "jquery": "^3.7.1"
+  },
+  "build": {
+    "appId": "pf_time",
+    "productName": "pf_time",
+    "directories": {
+      "output": "build"
+    },
+    "mac": {
+      "target": "dmg",
+      "icon": "static/icon.icns"
+    },
+    "win": {
+      "target": "nsis",
+      "icon": "static/icon.icns"
+    },
+    "linux": {
+      "target": "AppImage",
+      "icon": "static/icon.icns"
+    }
+  }
+  
+}
